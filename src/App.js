@@ -23,8 +23,6 @@ const App = () => {
     setCount(prev => prev + 1);
     const multiplier = 1.5 + (Math.random() * 0.5);
     setPortfolioValue(prev => Math.floor(prev * multiplier));
-    
-    // Get a new random quote
     const newQuote = trumpQuotes[Math.floor(Math.random() * trumpQuotes.length)];
     setCurrentQuote(newQuote);
   };
@@ -102,10 +100,19 @@ const App = () => {
               <h3 className="text-2xl font-bold mb-4">Total Supply</h3>
               <p className="text-5xl font-bold text-yellow-400">999.99M $NURO</p>
             </div>
-            <div className="bg-blue-900/50 p-6 rounded-lg">
+            <div className="bg-blue-900/50 p-6 rounded-lg space-y-4">
               <h3 className="text-2xl font-bold mb-4">Launching Exclusively On</h3>
               <p className="text-4xl font-bold text-yellow-400">PUMP.FUN</p>
               <p className="mt-4 text-xl">The most tremendous launch platform ever created!</p>
+              <div className="mt-6 p-4 bg-blue-800/30 rounded-lg">
+                <h4 className="text-lg font-bold mb-2">Contract Address</h4>
+                <div className="relative">
+                  <p className="font-mono text-sm break-all bg-blue-900/50 p-3 rounded select-all">
+                    5ZxZiZQvYXmncE7g4rikz7yWa8nGpEUBQ8vxHxFpump
+                  </p>
+                  <p className="text-xs mt-2 text-blue-300">Click to copy</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
